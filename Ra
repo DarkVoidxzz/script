@@ -345,7 +345,7 @@ do
     end
     function utility.sameteam(player, p1)
         local p0 = p1 or locpl
-        return (player.Team~=nil and player.Team==p0.Team or player.Team=="Department of External Affairs" or player.Team=="Engineering and Technical" or player.Team=="Ethics Committee" or player.Team=="Foundation Personnel" or player.Team=="Scientific Department" or player.Team=="Medical Department" or player.Team=="Logistics Department") and player.Neutral == false or false
+        return (player.Team~=nil and player.Team==p0.Team or player.Team.Name=="Department of External Affairs" or player.Team.Name=="Engineering and Technical" or player.Team.Name=="Ethics Committee" or player.Team.Name=="Foundation Personnel" or player.Team.Name=="Scientific Department" or player.Team.Name=="Medical Department" or player.Team.Name=="Logistics Department") and player.Neutral == false or false
     end
     function utility.getDistanceFromMouse(position)
         local screenpos, vis = worldToViewportPoint(camera, position)
