@@ -345,7 +345,7 @@ do
     end
     function utility.sameteam(player, p1)
         local p0 = p1 or locpl
-        return (player.Team~=nil and player.Team==p0.Team or player.Team.Name=="Department of External Affairs" or player.Team.Name=="Engineering and Technical" or player.Team.Name=="Ethics Committee" or player.Team.Name=="Foundation Personnel" or player.Team.Name=="Scientific Department" or player.Team.Name=="Medical Department" or player.Team.Name=="Logistics Department") and player.Neutral == false or false
+        return (player.Team~=nil and player.Team==p0.Team or player.Team.Name=="Department of External Affairs" or player.Team.Name=="Engineering and Technical" or player.Team.Name=="Ethics Committee" or player.Team.Name=="Foundation Personnel" or player.Team.Name=="Scientific Department" or player.Team.Name=="Medical Department" or player.Team.Name=="Logistics Department") or player.Team.Name=="Chaos Insurgency") and player.Neutral == false or false
     end
     function utility.getDistanceFromMouse(position)
         local screenpos, vis = worldToViewportPoint(camera, position)
@@ -1829,7 +1829,7 @@ do
         local viewportsize = camera.ViewportSize
         if credits == nil then
             credits = newdrawing("Text", {
-                Text = "dicksucker 40000"; -- yes now be happy this is free
+                Text = ""; -- yes now be happy this is free
                 Color = Color3.new(255,0,0);
                 Size = 25.0;
                 Transparency = .8;
